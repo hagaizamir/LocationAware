@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "879544448380",
+    "firebase_url": "https://locationaware-a89ac.firebaseio.com",
+    "project_id": "locationaware-a89ac",
+    "storage_bucket": "locationaware-a89ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879544448380:android:a1dbf08607f26689",
+        "android_client_info": {
+          "package_name": "hagai.edu.locationaware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879544448380-dj7c3an9v9gd90ghgjrar9m7dl3arc28.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hagai.edu.locationaware",
+            "certificate_hash": "98bee2c4652c04d77a0905c88999ce9cce93d37c"
+          }
+        },
+        {
+          "client_id": "879544448380-cug4ggirvvp5ct1peq6h2g0bsigqt9dg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGt33F443p_ea1h7nZdh7YosakOxUqSjA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879544448380-cug4ggirvvp5ct1peq6h2g0bsigqt9dg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
