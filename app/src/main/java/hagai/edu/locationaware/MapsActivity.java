@@ -28,8 +28,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        //fine an existing fragment in the xml (static aproche)
+//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+//                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment = new SupportMapFragment();
+
+        getSupportFragmentManager().beginTransaction().
+                replace(R.id.frame1, mapFragment).
+                commit();
+
+        mapFragment.getMapAsync(this);
         mapFragment.getMapAsync(this);
         mAuth = FirebaseAuth.getInstance();
 
