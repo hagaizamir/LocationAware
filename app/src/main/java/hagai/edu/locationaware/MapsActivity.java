@@ -35,7 +35,9 @@ public class MapsActivity extends AppCompatActivity{
 
         getSupportFragmentManager().beginTransaction().
                 replace(R.id.frame1, mapFragment).
+                replace(R.id.frame2,new LocationFragment()).
                 commit();
+
 
 
         mAuth = FirebaseAuth.getInstance();
