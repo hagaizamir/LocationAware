@@ -1,6 +1,9 @@
 package hagai.edu.locationaware;
 
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -47,7 +50,22 @@ public class FencingFragment extends Fragment {
 
     @OnClick(R.id.fabNotify)
     public void onNotifyClicked() {
+        /*
         Intent intent = new Intent(getContext(),NotificationService.class);
         getActivity().startService(intent);
+        */
+
+        //alarm manager may help us schedule repeating tasks
+
+        AlarmManager alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
+
+        Intent intent = new Intent(getContext(), NotificationService.class);
+        PendingIntent pi = PendingIntent.getService(getContext(), 10, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        //alarmManager.set();
+        alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, 10*1000 , 60000 , pi);
+        //alarmManager.setInexactRepeating();
+        //alarmManager.setExact();
+        //alarmManager.setAndAllowWhileIdle();
     }
 }
