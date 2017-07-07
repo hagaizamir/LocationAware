@@ -62,8 +62,10 @@ public class MyMapFragment extends SupportMapFragment implements OnMapReadyCallb
         mMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener() {
             @Override
             public boolean onMyLocationButtonClick() {
-                Location myLocation = mMap.getMyLocation();
-                Toast.makeText(getActivity(), "" + myLocation.getLatitude(), Toast.LENGTH_SHORT).show();
+                if (mMap.getMyLocation()!=null) {
+                    Location myLocation = mMap.getMyLocation();
+                    Toast.makeText(getActivity(), "" + myLocation.getLatitude(), Toast.LENGTH_SHORT).show();
+                }
                 return false;
             }
         });

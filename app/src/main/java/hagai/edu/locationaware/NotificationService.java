@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.content.LocalBroadcastManager;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -55,6 +56,12 @@ public class NotificationService extends IntentService {
             String result = builder.toString();
 
             //report to result
+            Intent message = new Intent("ITunesChannel");
+            message.putExtra("json", result);
+
+            //messanger in c#
+            //event....bus
+            LocalBroadcastManager.getInstance(this).sendBroadcast(message);
 
         }catch (MalformedURLException e){
             e.printStackTrace();
